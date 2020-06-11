@@ -63,6 +63,7 @@ def stream_to_target(stream, target, config={}):
                           max_batch_size,
                           line
                           )
+            print (line_count)
             if line_count > 0 and line_count % batch_detection_threshold == 0:
                 state_tracker.flush_streams()
             line_count += 1
