@@ -34,6 +34,7 @@ def main(config, input_stream=None):
         )
 
         if input_stream:
+            print ('have input stream')
             target_tools.stream_to_target(input_stream, postgres_target, config=config)
         else:
             target_tools.main(postgres_target)
